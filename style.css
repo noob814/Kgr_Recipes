@@ -1,0 +1,1164 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    position: relative;
+    height: 100vh; /* Optional: Makes sure the body takes up the full height of the viewport */
+    margin: 0;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('images/banner.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336 ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.text-box {
+    width: 90%;  /* Adjust width as needed */
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+
+}
+nav .fa{
+    display: none;
+}
+@media (max-width: 700px){
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li{
+
+        display: block;
+
+}
+.nav-links{
+    position: fixed;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+
+}
+nav .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.nav-links ul{
+    padding: 30px;
+}
+}   
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col {
+
+    padding: 20px 12px;
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.row {
+    display: flex; /* Aligns items side by side */
+    justify-content: space-between; /* Adds space between columns */
+    gap: 20px; /* Extra spacing between the images */
+    margin-top: 20px;
+}
+
+.campus-col {
+    flex-basis: 32%; /* Each item takes up about 1/3 of the row */
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.campus-col img {
+    width: 100%; /* Image fills the container width */
+    height: 100%; /* Image fills the container height */
+    display: block;
+    object-fit: cover; /* Maintains image proportions without distortion */
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.7s; /* Smooth transition on hover */
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7); /* Red overlay on hover */
+    color: #fff; /* Optional: ensures the text is visible on hover */
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.row {
+    display: flex; /* Makes children align side by side */
+    justify-content: space-between; /* Adds space between the columns */
+    align-items: flex-start; /* Aligns the columns to the top */
+    gap: 20px; /* Adds spacing between the columns */
+    flex-wrap: wrap; /* Allows wrapping if the screen width is too small */
+}
+
+.facilities-col {
+    flex-basis: 31%; /* Each column takes 31% of the row width */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.facilities-col img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50px;
+}
+.testimonial-col p{
+    padding: 0;
+
+}
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.testimonial-col fa{
+    color:#f44336;
+}
+@media(max-width: 700px){
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+
+    }
+   
+   
+
+}
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/enroll2.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color:#fff;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+
+    }
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-direction: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-col h1{
+    padding-top: 0;
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+.red-btn:hover{
+    color: #fff;
+}
+h1{
+    color: #f44336;
+}
+h2, h3, h4, h5, h6 {
+    color: #000; 
+}
+.blog{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.blog-left{
+    flex-basis: 65%;
+
+}
+.blog-left img{
+    width: 50%;
+
+}
+.blog-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+@media(max-width:700px){
+    .sub-header h1{
+        font-size: 24px;
+    }
+}
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+
+}
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div p{
+    padding: 0;
+}
+
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea {
+    width: 100%; /* Full width of the parent container */
+    padding: 12px; /* Slightly smaller padding for a balanced look */
+    margin-bottom: 20px; /* Increased spacing for better separation */
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners for a clean design */
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+    font-size: 16px; /* Consistent and readable font size */
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensures all boxes have equal height */
+    gap: 20px; /* Adds space between the boxes */
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+}
+
+.course-col-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: block; /* Makes the link behave like a block element */
+    flex-basis: 31%; /* Ensures consistent width for each box */
+}
+
+.course-col {
+    padding: 20px 12px;
+    background: #fff3f3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    height: 100%; /* Ensure consistent height inside flex */
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.south{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.row {
+    display: flex; /* Aligns items side by side */
+    justify-content: space-between; /* Adds space between columns */
+    gap: 20px; /* Extra spacing between the images */
+    margin-top: 20px;
+    flex-wrap:wrap
+}
+
+.south-col {
+    flex-basis: 32%; /* Each item takes up about 1/3 of the row */
+    min-height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.south-col img {
+    width: 100%; /* Image fills the container width */
+    max-height: 250px; /* Image fills the container height */
+    display: block;
+    object-fit: cover; /* Maintains image proportions without distortion */
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.7s; /* Smooth transition on hover */
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7); /* Red overlay on hover */
+    color: #fff; /* Optional: ensures the text is visible on hover */
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.north{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.row {
+    display: flex; /* Aligns items side by side */
+    justify-content: space-between; /* Adds space between columns */
+    gap: 20px; /* Extra spacing between the images */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.north-col {
+    flex-basis: 32%; /* Each item takes up about 1/3 of the row */
+    min-height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.north-col img {
+    width: 100%; /* Image fills the container width */
+    max-height: 250px; /* Image fills the container height */
+    display: block;
+    object-fit: cover; /* Maintains image proportions without distortion */
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.7s; /* Smooth transition on hover */
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7); /* Red overlay on hover */
+    color: #fff; /* Optional: ensures the text is visible on hover */
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.cont{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.row {
+    display: flex; /* Aligns items side by side */
+    justify-content: space-between; /* Adds space between columns */
+    gap: 20px; /* Extra spacing between the images */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.cont-col {
+    flex-basis: 32%; /* Each item takes up about 1/3 of the row */
+    min-height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cont-col img {
+    width: 100%; /* Image fills the container width */
+    max-height: 250px; /* Image fills the container height */
+    display: block;
+    object-fit: cover; /* Maintains image proportions without distortion */
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.7s; /* Smooth transition on hover */
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7); /* Red overlay on hover */
+    color: #fff; /* Optional: ensures the text is visible on hover */
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.paneer{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.paneer-left{
+    flex-basis: 65%;
+
+}
+.paneer-left img{
+    width: 50%;
+
+}
+.paneer-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.paneer-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.dal{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.dal-left{
+    flex-basis: 65%;
+
+}
+.dal-left img{
+    width: 50%;
+
+}
+.dal-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.dal-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.chole{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.chole-left{
+    flex-basis: 65%;
+
+}
+.chole-left img{
+    width: 50%;
+
+}
+.chole-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.chole-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.chettinad{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.chettinad-left{
+    flex-basis: 65%;
+
+}
+.chettinad-left img{
+    width: 50%;
+
+}
+.chettinad-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.chettinad-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.pesarattu{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.pesarattu-left{
+    flex-basis: 65%;
+
+}
+.pesarattu-left img{
+    width: 50%;
+
+}
+.pesarattu-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.pesarattu-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.kollu{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.kollu-left{
+    flex-basis: 65%;
+
+}
+.kollu-left img{
+    width: 50%;
+
+}
+.kollu-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.kollu-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.salad{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.salad-left{
+    flex-basis: 65%;
+
+}
+.salad-left img{
+    width: 50%;
+
+}
+.salad-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.salad-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.pasta{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.pasta-left{
+    flex-basis: 65%;
+
+}
+.pasta-left img{
+    width: 50%;
+
+}
+.pasta-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.pasta-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+.grilled{
+    width: 80%;
+    margin: auto;
+    padding: 0% 0;
+
+}
+.grilled-left{
+    flex-basis: 65%;
+
+}
+.grilled-left img{
+    width: 50%;
+
+}
+.grilled-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.grilled-left p{
+    color: #999;
+    padding: 0;
+
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+}
+
+ul li i {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+    width: 80px; /* Adjust width to your preference */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper layout behavior */
+    margin: 0; /* Remove default margins */
+    position: absolute; /* Allow precise placement */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+}
+   

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<section class="sub-header">
+        <nav>
+            <a href="index.html">
+                <img src="images/logo2.png" class="logo" alt="Logo">
+            </a>
+                
+            <div class="nav-links" id="navLinks">
+                <i class="bi bi-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html.html">ABOUT</a></li>
+                    <li><a href="course.html.html">RECIPES</a></li>
+                    <li><a href="blog.html.html">BLOG</a></li>
+                    <li><a href="contact.html.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="bi bi-bars" onclick="showMenu()"></i>
+
+        </nav>
+        <h1>Grilled Chicken with Veggies</h1>
+        </section>
+
+        <section class="grilled">
+            <div class="row">
+              
+                <div class="grilled-left">
+                    <img src="Grilled.jpeg" >
+                    <h2> Recipe</h2>
+                    <h4> Ingredients:</h4>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Chicken breasts</li>
+                        <li><i class="bi bi-check-circle"></i>Olive oil</li>
+                        <li><i class="bi bi-check-circle"></i> Tomatoes</li>
+                        <li><i class="bi bi-check-circle"></i> Garlic, lemon</li>
+                        <li><i class="bi bi-check-circle"></i> Bell peppers, zucchini, onions</li>
+
+                        <li><i class="bi bi-check-circle"></i> Spices: Salt and pepper</li>
+                      </ul>
+                      <h4>Nutrients:</h4>
+                      <ul>
+                        <li><i class="bi bi-broadcast"></i> <strong>Protein</strong>:  Chicken provides lean protein.</li>
+                        <li><i class="bi bi-broadcast"></i> <strong>Vitamins</strong>: Vegetables like bell peppers are rich in Vitamin C.</li>
+                        <li><i class="bi bi-broadcast"></i> <strong>Healthy Fats</strong>: Olive oil provides heart-healthy fats.</li>
+                      </ul>
+                  
+                      <h4>Health Benefits:</h4>
+                      <ul>
+                        <li><i class="bi bi-heart"></i> Supports muscle repair with protein.</li>
+                        <li><i class="bi bi-heart"></i> The vitamins in vegetables boost immunity and skin health.</li>
+                        <li><i class="bi bi-heart"></i> Healthy fats support heart health.
+                        </li>
+                      </ul>
+                    </div>
+                    <h4>Process</h4>
+                    <p> Season chicken breasts with olive oil, garlic, lemon, salt, and pepper. Grill until cooked through. Toss a variety of vegetables like bell peppers, zucchini, and onions with olive oil and seasonings, then grill them until tender.<br> Serve the chicken alongside the grilled veggies
+                    </p>
+                   <div class="comment-box">
+                    <h3>Leave a comment</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Email">
+                        <textarea rows="5" placeholder="Your Comment">
+
+                        </textarea>
+                        <button type="submit" class="hero-btn red-btn">POST COMMENT 
+
+                        </button>
+                    </form>
+                   </div>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+       
+        
+
+    
+    
+
+    
+   
+
+
+   
+    
+
+
+
+
+
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>
+                We are a small group of foodies determined to bring the best recipes to the world
+            </p> 
+            <div class="icons">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+                
+            </div>
+            <p> Made by <i class="bi-solid bi-heart"></i>Gayatri</p>
+        
+        </section>
+
+
+
+    <!------javascript------>
+
+<script>
+
+    var navLinks= document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html>

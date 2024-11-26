@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<section class="sub-header">
+        <nav>
+            <a href="recipes.html">
+                <img src="images/logo2.png" class="logo" alt="Logo">
+            </a>
+                
+            <div class="nav-links" id="navLinks">
+                <i class="bi bi-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html.html">ABOUT</a></li>
+                    <li><a href="course.html.html">RECIPES</a></li>
+                    <li><a href="blog.html.html">BLOG</a></li>
+                    <li><a href="contact.html.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="bi bi-bars" onclick="showMenu()"></i>
+
+        </nav>
+        <h1>Paneer Butter Masala</h1>
+        </section>
+
+        <section class="paneer">
+            <div class="row">
+              
+                <div class="paneer-left">
+                    <img src="Paneer.jpeg" >
+                    <h2> Recipe</h2>
+                    <h4> Ingredients:</h4>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Paneer</li>
+                        <li><i class="bi bi-check-circle"></i> Butter</li>
+                        <li><i class="bi bi-check-circle"></i> Cream</li>
+                        <li><i class="bi bi-check-circle"></i> Tomatoes</li>
+                        <li><i class="bi bi-check-circle"></i> Onions</li>
+                        <li><i class="bi bi-check-circle"></i> Cashew paste</li>
+                        <li><i class="bi bi-check-circle"></i> Spices: Garam masala, red chili powder</li>
+                      </ul>
+                      <h4>Nutrients:</h4>
+                      <ul>
+                        <li><i class="bi bi-broadcast"></i> <strong>Protein</strong>: Paneer is a rich source of high-quality protein.</li>
+                        <li><i class="bi bi-broadcast"></i> <strong>Healthy Fats</strong>: Butter and cream provide essential fats.</li>
+                        <li><i class="bi bi-broadcast"></i> <strong>Vitamins</strong>: Tomatoes offer Vitamin C and antioxidants like lycopene.</li>
+                      </ul>
+                  
+                      <h4>Health Benefits:</h4>
+                      <ul>
+                        <li><i class="bi bi-heart"></i> Supports muscle growth due to its protein content.</li>
+                        <li><i class="bi bi-heart"></i> Lycopene helps reduce oxidative stress.</li>
+                        <li><i class="bi bi-heart"></i> Provides energy through healthy fats and carbohydrates.</li>
+                      </ul>
+                    </div>
+                    <h4>Process</h4>
+                    <p>To make Paneer Butter Masala, sauté onions, tomatoes, and spices like cumin, garam masala, and coriander powder in butter. Once the mixture is soft, add cream and blend it into a smooth sauce. Then, add cubed paneer to the sauce and cook until well coated.<br> Garnish with fresh cilantro and serve with naan or rice.</p>
+                   <div class="comment-box">
+                    <h3>Leave a comment</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Email">
+                        <textarea rows="5" placeholder="Your Comment">
+
+                        </textarea>
+                        <button type="submit" class="hero-btn red-btn">POST COMMENT 
+
+                        </button>
+                    </form>
+                   </div>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+       
+        
+
+    
+    
+
+    
+   
+
+
+   
+    
+
+
+
+
+
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>
+                We are a small group of foodies determined to bring the best recipes to the world
+            </p> 
+            <div class="icons">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+                
+            </div>
+            <p> Made by <i class="bi-solid bi-heart"></i>Gayatri</p>
+        
+        </section>
+
+
+
+    <!------javascript------>
+
+<script>
+
+    var navLinks= document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html>
